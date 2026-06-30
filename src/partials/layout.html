@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta name="theme-color" content="#6b6840">
+  <meta name="author" content="OLZAOPTIC s.r.o.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="{{og_type}}">
+  <meta property="og:site_name" content="OLZA OPTIC">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{og_image}}">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  {{head_extra}}
+</head>
+<body class="{{body_class}}">
+{{sprite}}
+{{header}}
+<main id="main">
+{{content}}
+</main>
+{{footer}}
+<script src="assets/js/site.js" defer></script>
+{{schema}}
+</body>
+</html>

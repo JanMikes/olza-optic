@@ -1,0 +1,150 @@
+/* ============================================================
+   OLZA OPTIC — Design tokens
+   Warm, natural optician palette. Olive moss + ochre + sand.
+   Typeface: Open Sans (brand request). Sharp corners, warm soft shadows.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  /* ---- Brand core ---- */
+  --olza-moss:  #6b6840; /* deep olive — primary brand */
+  --olza-ochre: #cf8d32; /* warm amber — accent / CTA */
+  --olza-sage:  #c7c48b; /* soft sage — muted surfaces */
+  --olza-camel: #ac8c64; /* tan / camel — secondary warm */
+
+  /* ---- Moss (primary) ramp ---- */
+  --moss-700: #4c4a2d;
+  --moss-600: #5a5836;
+  --moss-500: #6b6840;
+  --moss-400: #847f54;
+  --moss-300: #a3a075;
+  --moss-200: #c7c48b;
+  --moss-100: #e4e2c8;
+  --moss-50:  #f2f1e2;
+
+  /* ---- Ochre (accent) ramp ---- */
+  --ochre-700: #9a6418;
+  --ochre-600: #b87826;
+  --ochre-500: #cf8d32;
+  --ochre-400: #dca455;
+  --ochre-300: #e7bd83;
+  --ochre-200: #f0d6b1;
+  --ochre-100: #f8ecd9;
+
+  /* ---- Camel (secondary warm) ramp ---- */
+  --camel-600: #8a6e4c;
+  --camel-500: #ac8c64;
+  --camel-300: #c9b196;
+  --camel-100: #ece1d3;
+
+  /* ---- Warm neutrals (paper & ink) ---- */
+  --ink-900: #2b2a24;
+  --ink-800: #3a3a32;
+  --ink-700: #4e4d44;
+  --ink-600: #6c6a5e;
+  --ink-500: #8b8979;
+  --ink-400: #aaa897;
+  --ink-300: #cac8b9;
+  --ink-200: #e3e1d6;
+  --ink-100: #efede4;
+  --paper:   #faf8f2;
+  --paper-2: #f5f1e6;
+  --white:   #ffffff;
+
+  /* ---- Semantic status ---- */
+  --success: #5a7a4a;
+  --warning: #cf8d32;
+  --danger:  #b4452f;
+  --info:    #5b7186;
+
+  /* ---- Semantic aliases ---- */
+  --bg-page:        var(--paper);
+  --bg-section:     var(--paper-2);
+  --bg-inverse:     var(--ink-800);
+  --surface-card:   var(--white);
+  --surface-sunken: var(--moss-50);
+  --surface-sage:   var(--moss-100);
+
+  --text-primary:   #3c3c3b;
+  --text-secondary: var(--ink-600);
+  --text-muted:     var(--ink-500);
+  --text-inverse:   var(--paper);
+  --text-brand:     var(--moss-500);
+  --text-on-accent: #ffffff;
+
+  --border-subtle:  var(--ink-200);
+  --border-default: var(--ink-300);
+  --border-strong:  var(--moss-300);
+
+  --accent:       var(--ochre-500);
+  --accent-hover: var(--ochre-600);
+  --brand:        var(--moss-500);
+  --brand-hover:  var(--moss-600);
+  --focus-ring:   color-mix(in srgb, var(--ochre-500) 55%, transparent);
+
+  /* ---- Typography ---- */
+  --font-sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, Menlo, Consolas, monospace;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Type scale (1.250 major third, 16px base) — uses clamp for fluid display sizes */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   20px;
+  --text-xl:   25px;
+  --text-2xl:  clamp(26px, 3.4vw, 31px);
+  --text-3xl:  clamp(30px, 4.2vw, 39px);
+  --text-4xl:  clamp(34px, 5vw, 49px);
+  --text-5xl:  clamp(40px, 6vw, 61px);
+  --text-6xl:  clamp(48px, 7vw, 76px);
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.12em;
+  --tracking-widest: 0.28em;
+
+  /* ---- Spacing (4px grid) ---- */
+  --space-1: 4px;   --space-2: 8px;   --space-3: 12px;  --space-4: 16px;
+  --space-5: 20px;  --space-6: 24px;  --space-8: 32px;  --space-10: 40px;
+  --space-12: 48px; --space-16: 64px; --space-20: 80px; --space-24: 96px;
+  --space-32: 128px;
+
+  /* ---- Radius (sharp design — corners are square) ---- */
+  --radius-sm: 0; --radius-md: 0; --radius-lg: 0; --radius-pill: 0;
+  --radius-chip: 14px;   /* the one rounded element: symptom chips */
+  --radius-circle: 50%;
+
+  /* ---- Shadows (warm-tinted, soft, low-contrast) ---- */
+  --shadow-xs: 0 1px 2px rgba(43, 42, 36, 0.06);
+  --shadow-sm: 0 2px 6px rgba(43, 42, 36, 0.07);
+  --shadow-md: 0 6px 18px rgba(43, 42, 36, 0.09);
+  --shadow-lg: 0 16px 40px rgba(43, 42, 36, 0.12);
+  --shadow-xl: 0 28px 64px rgba(43, 42, 36, 0.16);
+  --shadow-focus: 0 0 0 3px var(--focus-ring);
+
+  /* ---- Layout ---- */
+  --container-sm: 640px;
+  --container-md: 880px;
+  --container-lg: 1120px;
+  --container-xl: 1320px;
+
+  /* ---- Motion (gentle, no bounce) ---- */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.2, 1);
+  --dur-fast: 130ms;
+  --dur-base: 220ms;
+  --dur-slow: 380ms;
+}
