@@ -1,0 +1,83 @@
+/* ============================================================
+   OLZA OPTIC — Responsive layer for the pre-rendered design-system
+   pages. The source design uses fixed desktop inline styles; this
+   sheet only adds breakpoints (via !important overrides on tagged
+   elements) so the pixel-faithful desktop design also works on
+   phones. It never changes the desktop appearance.
+   ============================================================ */
+
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 88px; }
+[hidden] { display: none !important; }
+img { max-width: 100%; }
+
+/* ---- Mobile navigation (injected elements, hidden on desktop) ---- */
+.nav-burger {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: 0;
+  color: var(--paper);
+  cursor: pointer;
+  padding: 8px;
+  line-height: 0;
+}
+.nav-mobile { display: none; }
+.nav-mobile {
+  background: var(--moss-600, #5a5836);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 10px 20px 22px;
+}
+.nav-mobile a {
+  display: block;
+  color: rgba(247, 245, 239, 0.9);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 13px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.nav-mobile a:hover { color: var(--ochre-300, #e7bd83); }
+.nav-mobile .nav-mobile__cta {
+  margin-top: 16px;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  border-bottom: 0;
+  padding: 15px;
+  font-weight: 700;
+}
+.nav-mobile .nav-mobile__tel {
+  color: var(--ochre-300, #e7bd83);
+  border-bottom: 0;
+  font-weight: 700;
+}
+
+/* ---- Tablet / small-desktop: stack the wide grids ---- */
+@media (max-width: 980px) {
+  .r-navlinks { display: none !important; }
+  .r-navcta { display: none !important; }
+  .nav-burger { display: inline-flex !important; }
+  .nav-mobile.open { display: block !important; }
+
+  .r-2 { grid-template-columns: 1fr !important; }
+  .r-mediagrid { min-height: 0 !important; }
+  .r-mediaimg { min-height: 300px !important; }
+  .r-fixedw { width: auto !important; max-width: 100% !important; }
+  .r-3 { grid-template-columns: 1fr 1fr !important; }
+  .r-4 { grid-template-columns: 1fr 1fr !important; }
+  .r-5 { grid-template-columns: 1fr 1fr 1fr !important; }
+  .r-foot { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* ---- Phones ---- */
+@media (max-width: 640px) {
+  .r-3 { grid-template-columns: 1fr !important; }
+  .r-5 { grid-template-columns: 1fr 1fr !important; }
+  .r-foot { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 460px) {
+  .r-4 { grid-template-columns: 1fr !important; }
+  .r-5 { grid-template-columns: 1fr !important; }
+}

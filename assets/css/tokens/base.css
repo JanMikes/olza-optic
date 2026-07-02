@@ -1,0 +1,56 @@
+/* ============================================================
+   OLZA OPTIC — Base element styles & helpers
+   Lightweight resets + brand defaults. Optional for consumers.
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  line-height: var(--body-leading);
+  font-weight: var(--body-weight);
+  color: var(--text-primary);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-weight);
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+  margin: 0 0 0.5em;
+  text-wrap: balance;
+}
+h1 { font-size: var(--text-4xl); letter-spacing: var(--tracking-tight); }
+h2 { font-size: var(--text-3xl); letter-spacing: var(--tracking-tight); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
+
+p { margin: 0 0 1em; text-wrap: pretty; }
+
+/* Inline links — email, URLs, references — use the ochre accent brand-wide */
+a { color: var(--ochre-500); text-decoration: none; }
+a:hover { color: var(--ochre-600); }
+
+/* ---- Brand utility classes ---- */
+.olza-eyebrow {
+  font-weight: var(--eyebrow-weight);
+  letter-spacing: var(--eyebrow-tracking);
+  text-transform: var(--eyebrow-transform);
+  font-size: var(--text-sm);
+  color: var(--accent);
+}
+
+.olza-display {
+  font-family: var(--display-font);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: var(--leading-tight);
+}
+
+::selection { background: var(--moss-200); color: var(--ink-900); }
+
+:focus-visible { outline: none; box-shadow: var(--shadow-focus); border-radius: var(--radius-sm); }

@@ -1,0 +1,82 @@
+/* ============================================================
+   OLZA OPTIC — Color tokens
+   Warm, natural optician palette. Olive moss + ochre + sand.
+   ============================================================ */
+:root {
+  /* ---- Brand core (from brand guidelines) ---- */
+  --olza-moss:   #6b6840; /* deep olive — primary brand */
+  --olza-ochre:  #cf8d32; /* warm amber — accent / CTA */
+  --olza-sage:   #c7c48b; /* soft sage — muted surfaces */
+  --olza-camel:  #ac8c64; /* tan / camel — secondary warm */
+
+  /* ---- Moss (primary) ramp ---- */
+  --moss-700: #4c4a2d;
+  --moss-600: #5a5836;
+  --moss-500: #6b6840; /* base */
+  --moss-400: #847f54;
+  --moss-300: #a3a075;
+  --moss-200: #c7c48b;
+  --moss-100: #e4e2c8;
+  --moss-50:  #f2f1e2;
+
+  /* ---- Ochre (accent) ramp ---- */
+  --ochre-700: #9a6418;
+  --ochre-600: #b87826;
+  --ochre-500: #cf8d32; /* base */
+  --ochre-400: #dca455;
+  --ochre-300: #e7bd83;
+  --ochre-200: #f0d6b1;
+  --ochre-100: #f8ecd9;
+
+  /* ---- Camel (secondary warm) ramp ---- */
+  --camel-600: #8a6e4c;
+  --camel-500: #ac8c64; /* base */
+  --camel-300: #c9b196;
+  --camel-100: #ece1d3;
+
+  /* ---- Warm neutrals (paper & ink) ---- */
+  --ink-900: #2b2a24; /* near-black warm */
+  --ink-800: #3a3a32; /* charcoal (dark surfaces) */
+  --ink-700: #4e4d44;
+  --ink-600: #6c6a5e;
+  --ink-500: #8b8979;
+  --ink-400: #aaa897;
+  --ink-300: #cac8b9;
+  --ink-200: #e3e1d6;
+  --ink-100: #efede4;
+  --paper:   #faf8f2; /* warm off-white base */
+  --paper-2: #f5f1e6; /* cream card / section tint */
+  --white:   #ffffff;
+
+  /* ---- Semantic status ---- */
+  --success: #5a7a4a;
+  --warning: #cf8d32;
+  --danger:  #b4452f;
+  --info:    #5b7186;
+
+  /* ============ Semantic aliases ============ */
+  --bg-page:        var(--paper);
+  --bg-section:     var(--paper-2);
+  --bg-inverse:     var(--ink-800);
+  --surface-card:   var(--white);
+  --surface-sunken: var(--moss-50);
+  --surface-sage:   var(--moss-100);
+
+  --text-primary:   #3c3c3b; /* primary body & heading text */
+  --text-secondary: var(--ink-600);
+  --text-muted:     var(--ink-500);
+  --text-inverse:   var(--paper);
+  --text-brand:     var(--moss-500);
+  --text-on-accent: #ffffff;
+
+  --border-subtle:  var(--ink-200);
+  --border-default: var(--ink-300);
+  --border-strong:  var(--moss-300);
+
+  --accent:         var(--ochre-500);
+  --accent-hover:   var(--ochre-600);
+  --brand:          var(--moss-500);
+  --brand-hover:    var(--moss-600);
+
+  --focus-ring:     color-mix(in srgb, var(--ochre-500) 55%, transparent);
+}
