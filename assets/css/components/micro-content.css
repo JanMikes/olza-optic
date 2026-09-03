@@ -1,0 +1,46 @@
+/* ============================================================
+   OLZA OPTIC — Micro-content (client-editable hours & notices)
+   The CMS returns a bare <table> and WYSIWYG paragraphs; these rules
+   make that markup inherit the surrounding typography so the design
+   stays exactly as designed, whatever the editor sends.
+   ============================================================ */
+
+/* ---- Opening hours: day/time table styled as the footer text block ---- */
+.opening-hours-container table {
+  width: auto;
+  border-collapse: collapse;
+  font: inherit;
+  color: inherit;
+}
+.opening-hours-container td {
+  padding: 0;
+  border: 0;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.opening-hours-container td:first-child { padding-right: var(--space-3); }
+
+/* ---- Scheduled notice bar: hidden until the CMS entry is active ---- */
+.notice-bar {
+  background: var(--ochre-100);
+  color: var(--ink-900);
+  border-bottom: 1px solid var(--ochre-200);
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+.notice-bar > * {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  text-align: center !important;
+}
+.notice-bar > * + * { margin-top: var(--space-1); }
+.notice-bar a { color: var(--ochre-700); }
+
+@media (max-width: 640px) {
+  .notice-bar {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-xs);
+  }
+}
