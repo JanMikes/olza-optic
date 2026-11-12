@@ -53,8 +53,18 @@ img { max-width: 100%; }
   font-weight: 700;
 }
 
+/* ---- Link to the Moje čočky e-shop, in the e-shop's own button colours ---- */
+:root { --mojecocky-green: #0d6867; --mojecocky-green-hover: #5cc553; }
+.btn-mojecocky:hover,
+.btn-mojecocky:focus-visible {
+  background: var(--mojecocky-green-hover) !important;
+  border-color: var(--mojecocky-green-hover) !important;
+}
+
 /* ---- Tablet / small-desktop: stack the wide grids ---- */
 @media (max-width: 980px) {
+  /* Stacked image+text sections: photo always above the text */
+  .r-mediagrid > .r-mediaimg { order: -1; }
   .r-navlinks { display: none !important; }
   .r-navcta { display: none !important; }
   .nav-burger { display: inline-flex !important; }
